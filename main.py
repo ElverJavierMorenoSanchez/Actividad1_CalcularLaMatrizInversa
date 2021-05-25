@@ -33,3 +33,24 @@ def calMAdjunta(arr):
                 arr[i + 1][j - 1] = - aux
 
     return arr
+
+
+#Llamada a las funciones
+arr = inputMatriz()
+print('\n La matriz introducida es:')
+print(arr)
+
+determinante = calDeterminante(arr)
+print('\n El determinante de la matriz es: ', determinante)
+
+print('\n La matriz transpuesta es:')
+print(arr.T)
+
+arr = calMAdjunta(arr.T)
+print('\n La matriz adjunta es:')
+print(arr)
+
+arr = arr/determinante
+print('\n La matriz inversa es:')
+print(arr)
+
