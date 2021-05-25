@@ -53,4 +53,5 @@ print(arr)
 arr = arr/determinante
 print('\n La matriz inversa es:')
 print(arr)
+print('\n')
 
