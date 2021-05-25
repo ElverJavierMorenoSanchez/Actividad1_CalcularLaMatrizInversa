@@ -19,3 +19,17 @@ def calDeterminante(arr):
     det = (arr[0][0] * arr[1][1]) - (arr[0][1] * arr[1][0])
 
     return det
+
+def calMAdjunta(arr):
+    for i in range(2):
+        for j in range(2):
+            if(i == 0 and i==j):
+                aux = arr[i][j]
+                arr[i][j] = arr[i+1][j+1]
+                arr[i + 1][j + 1] = aux
+            elif(i == 0 and i!=j):
+                aux = arr[i][j]
+                arr[i][j] = - arr[i + 1][j - 1]
+                arr[i + 1][j - 1] = - aux
+
+    return arr
